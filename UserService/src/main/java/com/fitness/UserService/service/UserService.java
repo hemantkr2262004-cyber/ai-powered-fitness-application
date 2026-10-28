@@ -7,10 +7,11 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class UserService {
+
     public UserResponse register(RegisterRequest request) {
         user user = new user();
 
-        user.getClass(request.getEmail());
+        user.setEmail(request.getEmail());
         user.setPassword(request.getPassword());
         user.setFirstName(request.getFirstName());
         user.setLastName(request.getLastName());
